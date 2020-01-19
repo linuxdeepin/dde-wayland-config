@@ -1,4 +1,4 @@
-Source: kelvinu-dm
+Source: kelvinu
 Section: utils
 Priority: optional
 Maintainer: Packages <packages@deepin.com>
@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 11)
 Standards-Version: 4.1.3
 Homepage: https://www.deepin.org
 
-Package: deepin-defender
+Package: kelvinu
 Architecture: any
 Depends: ${shlibs:Depends}, 
 	${misc:Depends},

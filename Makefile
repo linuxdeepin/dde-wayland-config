@@ -5,15 +5,14 @@
 all:kelvinu-dm
 
 
-kelvinu-dm:deepin.desktop runkwin.sh startdde-wayland
+kelvinu-dm:
 
 
-install:preinstall
-	cp ./deepin.desktop /usr/share/xsessions/; 
-	cp ./runkwin.sh /usr/work/; 
-	cp ./startdde-wayland /usr/bin/
+install:
+	mkdir -p ${DESTDIR}/usr/share/wayland-sessions/
+	mkdir -p ${DESTDIR}/usr/work/
+	mkdir -p ${DESTDIR}/usr/bin/
+	install deepin.desktop ${DESTDIR}/usr/share/wayland-sessions/
+	install runkwin.sh ${DESTDIR}/usr/work/ 
+	install startdde-wayland ${DESTDIR}/usr/bin/
 
-preinstall:
-	@if [ ! -d /usr/work ]; then \
-		mkdir -p /usr/work; \
-		fi
