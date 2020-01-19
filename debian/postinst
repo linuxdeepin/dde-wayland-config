@@ -1,0 +1,20 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = configure ]; then
+	if command -v setcap > /dev/null; then
+		if setcap cap_dac_read_search,cap_kill,cap_net_admin,cap_net_raw,cap_sys_ptrace+ep /usr/bin/deepin-MonitorNetFlow;then
+			chmod u-s /usr/bin/deepin-MonitorNetFlow
+		else
+			echo "Setcap failed, falling back to setuid" >&2
+			chmod u+s /usr/bin/deepin-MonitorNetFlow
+		fi
+	else
+		echo "Setcap is not installed, falling back to setuid" >&2
+		chmod u+s /usr/bin/deepin-MonitorNetFlow
+	fi  
+fi
+
+#DEBHELPER#
+
+exit 0
