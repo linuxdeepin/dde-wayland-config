@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=Deepin
 Comment=Deepin Desktop Environment
-Exec=/usr/work/runkwin.sh
-TryExec=/usr/work/runkwin.sh
+Exec=/usr/bin/runkwin.sh
+TryExec=/usr/bin/runkwin.sh

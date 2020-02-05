@@ -11,10 +11,10 @@ kelvinu-dm:
 install:
 	mkdir -p ${DESTDIR}/usr/share/wayland-sessions/
 	install deepin.desktop ${DESTDIR}/usr/share/wayland-sessions/
-	mkdir -p ${DESTDIR}/usr/work/
-	install runkwin.sh ${DESTDIR}/usr/work/ 
 	mkdir -p ${DESTDIR}/usr/bin/
 	install startdde-wayland ${DESTDIR}/usr/bin/
+	install runkwin.sh ${DESTDIR}/usr/bin/
+	install kwin_wayland_helper ${DESTDIR}/usr/bin/
 
 clean:
 
