@@ -3,3 +3,4 @@ Name=Deepin
 Comment=Deepin Desktop Environment
 Exec=/usr/bin/runkwin.sh
 TryExec=/usr/bin/runkwin.sh
+X-LightDM-Session-Type=wayland
