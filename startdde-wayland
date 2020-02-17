@@ -6,4 +6,7 @@ unset QML2_IMPORT_PATH
 unset XDG_DATA_DIRS
 export QT_QPA_PLATFORM=xcb
 export DDE_DEBUG_LEVEL=debug
+
+. "${HOME}/.dde_env"
+
 exec dbus-launch /usr/bin/startdde
