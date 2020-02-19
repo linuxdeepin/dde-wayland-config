@@ -9,4 +9,8 @@ export QT_PLUGIN_PATH=/opt/usr/plugins
 export QML2_IMPORT_PATH=/opt/usr/qml:/usr/lib/aarch64-linux-gnu/qt5/qml
 export XDG_DATA_DIRS=/opt/usr/share:/usr/share
 
+if [ ! -f "$HOME/.config/kglobalshortcutsrc" ]; then
+    cp -n /etc/xdg/kglobalshortcutsrc $HOME/.config/kglobalshortcutsrc
+fi
+
 exec /opt/usr/bin/kwin_wayland --xwayland --drm --no-lockscreen  startdde-wayland
