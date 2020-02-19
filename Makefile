@@ -15,6 +15,7 @@ install:
 	install startdde-wayland ${DESTDIR}/usr/bin/
 	install runkwin.sh ${DESTDIR}/usr/bin/
 	install kwin_wayland_helper ${DESTDIR}/usr/bin/
+	install dde_update_dbus_env ${DESTDIR}/usr/bin/
 
 clean:
 

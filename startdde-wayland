@@ -5,8 +5,26 @@ unset QT_PLUGIN_PATH
 unset QML2_IMPORT_PATH
 unset XDG_DATA_DIRS
 export QT_QPA_PLATFORM=xcb
-export DDE_DEBUG_LEVEL=debug
+#export DDE_DEBUG_LEVEL=debug
+
+if [ -z "$DISPLAY" ]; then
+  export DISPLAY=:0
+fi
+if [ -z "$WAYLAND_DISPLAY" ]; then
+  export WAYLAND_DISPLAY=wayland-0
+fi
 
 . "${HOME}/.dde_env"
 
-exec dbus-launch /usr/bin/startdde
+if [ -x "/usr/bin/dbus-update-activation-environment" ]; then
+  # tell dbus-daemon --session (and systemd --user, if running)
+  # to put a minimal subset of the Xsession's environment in activated
+  # services' environments
+  dbus-update-activation-environment --verbose --systemd --all
+fi
+
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+  exec dbus-launch /usr/bin/startdde
+else
+  exec /usr/bin/startdde
+fi
