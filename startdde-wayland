@@ -7,6 +7,8 @@ unset XDG_DATA_DIRS
 export QT_QPA_PLATFORM=xcb
 #export DDE_DEBUG_LEVEL=debug
 
+export _d_disable_filedialog=1
+
 if [ -z "$DISPLAY" ]; then
   export DISPLAY=:0
 fi
