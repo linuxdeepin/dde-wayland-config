@@ -6,7 +6,7 @@ export GDK_BACKEND=x11
 export LD_LIBRARY_PATH=/opt/usr/lib:/opt/usr/lib/aarch64-linux-gnu/
 export QT_QPA_PLATFORM_PLUGIN_PATH=/opt/usr/plugins/platforms:/opt/usr/lib/aarch64-linux-gnu/plugins/platforms
 export QT_PLUGIN_PATH=/opt/usr/plugins:/opt/usr/lib/aarch64-linux-gnu/plugins/
-export QML2_IMPORT_PATH=/opt/usr/qml:/usr/lib/aarch64-linux-gnu/qt5/qml
+export QML2_IMPORT_PATH=/opt/usr/qml:/opt/usr/lib/aarch64-linux-gnu/qml:/usr/lib/aarch64-linux-gnu/qt5/qml
 export XDG_DATA_DIRS=/opt/usr/share:/usr/share
 export LD_PRELOAD=/opt/usr/plugins/platforms/libdde-kwin-wayland.so
 
