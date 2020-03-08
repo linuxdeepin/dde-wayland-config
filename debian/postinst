@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cp /usr/share/wayland-sessions/deepin.desktop /usr/share/xsessions/deepin.desktop
+mv /usr/share/wayland-sessions/deepin.desktop /usr/share/xsessions/deepin.desktop
 
 
