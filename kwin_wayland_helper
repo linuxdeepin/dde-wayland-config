@@ -3,16 +3,16 @@
 export KWIN_COMPOSE=O2ES
 export GDK_BACKEND=x11
 
-export LD_LIBRARY_PATH=/opt/usr/lib:/opt/usr/lib/aarch64-linux-gnu/
-export QT_QPA_PLATFORM_PLUGIN_PATH=/opt/usr/plugins/platforms:/opt/usr/lib/aarch64-linux-gnu/plugins/platforms
-export QT_PLUGIN_PATH=/opt/usr/plugins:/opt/usr/lib/aarch64-linux-gnu/plugins/
-export QML2_IMPORT_PATH=/opt/usr/qml:/opt/usr/lib/aarch64-linux-gnu/qml:/usr/lib/aarch64-linux-gnu/qt5/qml
-export XDG_DATA_DIRS=/opt/usr/share:/usr/share
-export XDG_CONFIG_DIRS=/opt/etc/xdg:/etc/xdg
-export LD_PRELOAD=/opt/usr/plugins/platforms/libdde-kwin-wayland.so
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib/aarch64-linux-gnu/
+export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/local/plugins/platforms:/usr/local/lib/aarch64-linux-gnu/plugins/platforms
+export QT_PLUGIN_PATH=/usr/local/plugins:/usr/local/lib/aarch64-linux-gnu/plugins/
+export QML2_IMPORT_PATH=/usr/local/qml:/usr/local/lib/aarch64-linux-gnu/qml:/usr/lib/aarch64-linux-gnu/qt5/qml
+export XDG_DATA_DIRS=/usr/local/share:/usr/share
+export XDG_CONFIG_DIRS=/usr/local/etc/xdg:/etc/xdg
+export LD_PRELOAD=/usr/local/plugins/platforms/libdde-kwin-wayland.so
 
 if [ ! -f "$HOME/.config/kglobalshortcutsrc" ]; then
-    cp -n /opt/etc/xdg/kglobalshortcutsrc $HOME/.config/kglobalshortcutsrc
+    cp -n /usr/local/etc/xdg/kglobalshortcutsrc $HOME/.config/kglobalshortcutsrc
 fi
 
-exec /opt/usr/bin/kwin_wayland -platform dde-kwin-wayland --xwayland --drm --no-lockscreen  startdde-wayland
+exec /usr/local/bin/kwin_wayland -platform dde-kwin-wayland --xwayland --drm --no-lockscreen  startdde-wayland
