@@ -5,6 +5,10 @@ unset QT_PLUGIN_PATH
 unset QML2_IMPORT_PATH
 unset XDG_DATA_DIRS
 export QT_QPA_PLATFORM=xcb
+
+# kwindowsystem need this to find platform plugin
+# this makes deepin-wm-faker work
+export QT_PLUGIN_PATH=/usr/lib/aarch64-linux-gnu/qt5/plugins
 #export DDE_DEBUG_LEVEL=debug
 
 export _d_disable_filedialog=1
