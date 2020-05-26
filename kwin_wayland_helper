@@ -15,4 +15,5 @@ if [ ! -f "$HOME/.config/kglobalshortcutsrc" ]; then
     cp -n /usr/local/etc/xdg/kglobalshortcutsrc $HOME/.config/kglobalshortcutsrc
 fi
 
-exec /usr/local/bin/kwin_wayland -platform dde-kwin-wayland --xwayland --drm --no-lockscreen  startdde-wayland
+export QT_LOGGING_RULES="kwin*=true;kwin_libinput=false;"
+exec /usr/local/bin/kwin_wayland -platform dde-kwin-wayland --xwayland --drm --no-lockscreen  startdde-wayland 2> $HOME/.kwin.log
