@@ -16,4 +16,12 @@ if [ ! -f "$HOME/.config/kglobalshortcutsrc" ]; then
 fi
 
 export QT_LOGGING_RULES="kwin*=true;kwin_libinput=false;"
+
+res=`ps aux | grep /usr/local/bin/kwin_wayland  | awk '{print $8}' | grep R`
+while [ $? -eq 0 ]
+do
+    sleep 0.5s
+	res=`ps aux | grep /usr/local/bin/kwin_wayland | awk '{print $8}' | grep R`
+done
+
 exec /usr/local/bin/kwin_wayland -platform dde-kwin-wayland --xwayland --drm --no-lockscreen  startdde-wayland 2> $HOME/.kwin.log
