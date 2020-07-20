@@ -2,6 +2,7 @@
 
 export KWIN_COMPOSE=O2ES
 export GDK_BACKEND=x11
+export KWIN_USE_BUFFER_AGE=1
 
 if [ ! -f "$HOME/.config/kglobalshortcutsrc" ]; then
     cp -n /etc/xdg/kglobalshortcutsrc $HOME/.config/kglobalshortcutsrc
