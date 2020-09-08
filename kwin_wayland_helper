@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export KWIN_COMPOSE=O2ES
 export GDK_BACKEND=x11
@@ -16,6 +16,10 @@ if [ ! -f "$HOME/.config/kglobalshortcutsrc" ]; then
 fi
 
 export QT_LOGGING_RULES="kwin*=true;kwin_libinput=false;"
+
+if [ -f "$HOME/.config/locale.conf" ]; then
+    source $HOME/.config/locale.conf
+fi
 
 res=`ps aux | grep /usr/local/bin/kwin_wayland  | awk '{print $8}' | grep R`
 while [ $? -eq 0 ]
