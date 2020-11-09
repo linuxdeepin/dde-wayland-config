@@ -16,7 +16,8 @@ install:
 	install runkwin.sh ${DESTDIR}/usr/bin/
 	install kwin_wayland_helper ${DESTDIR}/usr/bin/
 	install dde_update_dbus_env ${DESTDIR}/usr/bin/
-       install config.json ${DESTDIR}/var/lib/lastore/
+	mkdir -p ${DESTDIR}/var/lib/lastore/
+	install config.json ${DESTDIR}/var/lib/lastore/
 
 clean:
 
