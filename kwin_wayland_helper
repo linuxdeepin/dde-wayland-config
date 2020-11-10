@@ -9,6 +9,7 @@ if [ ! -f "$HOME/.config/kglobalshortcutsrc" ]; then
 fi
 
 export QT_LOGGING_RULES="kwin*=true;kwin_libinput=false;"
+export QT_WAYLAND_FORCE_DPI=$(expr `gsettings get com.deepin.xsettings xft-dpi` / 1024)
 
 if [ -f "$HOME/.config/locale.conf" ]; then
     source $HOME/.config/locale.conf
