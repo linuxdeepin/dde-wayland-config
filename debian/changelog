@@ -1,5 +1,6 @@
-kelvinu (1.0-1) unstable; urgency=medium
+kelvinu (5.2.0102.1-1) unstable; urgency=medium
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+   * Rebuild Version 5.2.0102.1
 
- -- unknown <zs@zs-PC>  Tue, 10 Dec 2019 13:31:29 +0800
+ -- xiehui <xiehui@uniontech.com>  Tue, 10 Dec 2019 13:31:29 +0800
+
