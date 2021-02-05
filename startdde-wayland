@@ -23,6 +23,9 @@ fi
 
 . "${HOME}/.dde_env"
 
+name=`dmidecode -t 1 | awk '/Product Name:/{print $NF}'`
+export SYS_PRODUCT_NAME=${name}
+
 if [ -x "/usr/bin/dbus-update-activation-environment" ]; then
   # tell dbus-daemon --session (and systemd --user, if running)
   # to put a minimal subset of the Xsession's environment in activated
