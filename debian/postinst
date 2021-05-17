@@ -1,6 +1,8 @@
 #!/bin/bash
 
-[ ! -d /usr/share/xsessions ] && mkdir -p /usr/share/xsessions 
-[ -f /usr/share/wayland-sessions/deepin.desktop ] && mv -f /usr/share/wayland-sessions/deepin.desktop /usr/share/xsessions/deepin.desktop
-
+#[ ! -d /usr/share/xsessions ] && mkdir -p /usr/share/xsessions 
+#[ -f /usr/share/wayland-sessions/deepin.desktop ] && mv -f /usr/share/wayland-sessions/deepin.desktop /usr/share/xsessions/deepin.desktop
+chown root Xdeepin
+chgrp root Xdeepin
+chmod +s /usr/bin/Xdeepin
 
