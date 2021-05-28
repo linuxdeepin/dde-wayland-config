@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	FILE_PATH = "/usr/share/wayland-sessions/deepin-Xwayland.desktop"
+	FILE_PATH = "/usr/share/wayland-sessions/DeepinOnXwayland.desktop"
 )
 var Usage = func(){
   fmt.Println("Please typing as: xdeepin -on or xdeepin -off  ")

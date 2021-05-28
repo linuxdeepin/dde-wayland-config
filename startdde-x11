@@ -5,7 +5,6 @@ unset QT_PLUGIN_PATH
 unset QML2_IMPORT_PATH
 unset XDG_DATA_DIRS
 export QT_QPA_PLATFORM=xcb
-export XDG_SESSION_TYPE=x11
 #export QT_WAYLAND_SHELL_INTEGRATION=kwayland-shell
 
 # kwindowsystem need this to find platform plugin

@@ -17,7 +17,7 @@ dde-setHidden:
 install::
 	mkdir -p ${DESTDIR}/usr/share/wayland-sessions/
 	install deepin.desktop ${DESTDIR}/usr/share/wayland-sessions/
-	install deepin-Xwayland.desktop ${DESTDIR}/usr/share/wayland-sessions/
+	install DeepinOnXwayland.desktop ${DESTDIR}/usr/share/wayland-sessions/
 	mkdir -p ${DESTDIR}/usr/bin/
 	install startdde-wayland ${DESTDIR}/usr/bin/
 	install runkwin.sh ${DESTDIR}/usr/bin/
