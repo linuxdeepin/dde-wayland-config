@@ -10,6 +10,7 @@ fi
 
 export QT_LOGGING_RULES="kwin*=true;kwin_libinput=false;"
 export QT_WAYLAND_FORCE_DPI=$(expr `gsettings get com.deepin.xsettings xft-dpi` / 1024)
+export QT_MESSAGE_PATTERN="[%{time yyyy-MM-dd hh:mm:ss.zzz}] %{function}:%{line} - %{message}"
 
 if [ -f "$HOME/.config/locale.conf" ]; then
     source $HOME/.config/locale.conf
