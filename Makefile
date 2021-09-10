@@ -18,6 +18,8 @@ install::
 	mkdir -p ${DESTDIR}/usr/share/wayland-sessions/
 	install deepin.desktop ${DESTDIR}/usr/share/wayland-sessions/
 	install DeepinOnXwayland.desktop ${DESTDIR}/usr/share/wayland-sessions/
+	mkdir -p ${DESTDIR}/etc/
+	install -m 0644 udcp-client.conf ${DESTDIR}/etc/
 	mkdir -p ${DESTDIR}/usr/bin/
 	install startdde-wayland ${DESTDIR}/usr/bin/
 	install runkwin.sh ${DESTDIR}/usr/bin/
@@ -32,7 +34,7 @@ install::
 	chown root Xdeepin
 	chgrp root Xdeepin
 	install -Dm4755 Xdeepin ${DESTDIR}/usr/bin
-
+	
 clean:
 
 
