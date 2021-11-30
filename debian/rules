@@ -2,6 +2,7 @@
 
 include /usr/share/dpkg/default.mk
 export GOPATH := /usr/share/gocode
+export GOCACHE=/tmp/
 
 %:
 	dh $@ 

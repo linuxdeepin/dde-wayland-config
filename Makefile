@@ -4,7 +4,7 @@
 GOPATH := /usr/share/gocode
 GOPATH_DIR = gopath
 GOBUILD = go build -v
-
+export GO111MODULE = off
 
 all:kelvinu-dm
 
