@@ -1,4 +1,4 @@
-Source: dde-wayland-environment-config
+Source: dde-wayland-config
 Section: utils
 Priority: optional
 Build-Depends: debhelper (>= 11),golang-go
@@ -6,7 +6,7 @@ Maintainer: ganjing <ganjing@uniontech.com>
 Standards-Version: 4.1.3
 Homepage: https://www.deepin.org
 
-Package: dde-wayland-environment-config
+Package: dde-wayland-config
 Replaces: kelvinu
 Conflicts: kelvinu
 Architecture: any
