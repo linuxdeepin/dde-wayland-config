@@ -18,8 +18,6 @@ install::
 	mkdir -p ${DESTDIR}/usr/share/wayland-sessions/
 	install Wayland.desktop ${DESTDIR}/usr/share/wayland-sessions/
 	install DeepinOnXwayland.desktop ${DESTDIR}/usr/share/wayland-sessions/
-	mkdir -p ${DESTDIR}/etc/
-	install -m 0644 udcp-client.conf ${DESTDIR}/etc/
 	mkdir -p ${DESTDIR}/usr/bin/
 	install startdde-wayland ${DESTDIR}/usr/bin/
 	install runkwin.sh ${DESTDIR}/usr/bin/
