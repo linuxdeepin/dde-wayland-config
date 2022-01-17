@@ -28,11 +28,20 @@ install::
 	install startdde-x11 ${DESTDIR}/usr/bin/
 	install runkwin-x11.sh ${DESTDIR}/usr/bin/
 	install kwin_wayland-x11_helper ${DESTDIR}/usr/bin/
-	install dde_update_dbus_env ${DESTDIR}/usr/bin/
 	chown root Xdeepin
 	chgrp root Xdeepin
 	install -Dm4755 Xdeepin ${DESTDIR}/usr/bin
 	
-clean:
-
+uninstall:
+	rm -rf ${DESTDIR}/usr/share/wayland-sessions/
+	rm -f  ${DESTDIR}/etc/udcp-client.conf
+	rm -f  ${DESTDIR}/usr/bin/startdde-wayland
+	rm -f  ${DESTDIR}/usr/bin/runkwin.sh
+	rm -f  ${DESTDIR}/usr/bin/startdde-x11
+	rm -f  ${DESTDIR}/usr/bin/runkwin-x11.sh
+	rm -f  ${DESTDIR}/usr/bin/Xdeepin
+	rm -f  ${DESTDIR}/usr/bin/kwin_wayland-x11_helper
+	rm -f  ${DESTDIR}/usr/bin/dde_update_dbus_env
+	rm -f  ${DESTDIR}/usr/bin/kwin_wayland_helper
+	rm -f  ${DESTDIR}/var/lib/lastore/config.json
 
