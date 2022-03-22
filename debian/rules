@@ -14,5 +14,3 @@ endif
 override_dh_auto_clean:
 	echo clean
 
-override_dh_auto_configure:
-	$(shell bash deepin_autoinstallupdatetype.sh)

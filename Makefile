@@ -24,7 +24,6 @@ install::
 	install kwin_wayland_helper ${DESTDIR}/usr/bin/
 	install dde_update_dbus_env ${DESTDIR}/usr/bin/
 	mkdir -p ${DESTDIR}/var/lib/lastore/
-	install config.json ${DESTDIR}/var/lib/lastore/
 	install startdde-x11 ${DESTDIR}/usr/bin/
 	install runkwin-x11.sh ${DESTDIR}/usr/bin/
 	install kwin_wayland-x11_helper ${DESTDIR}/usr/bin/
@@ -43,4 +42,3 @@ uninstall:
 	rm -f  ${DESTDIR}/usr/bin/kwin_wayland-x11_helper
 	rm -f  ${DESTDIR}/usr/bin/dde_update_dbus_env
 	rm -f  ${DESTDIR}/usr/bin/kwin_wayland_helper
-	rm -f  ${DESTDIR}/var/lib/lastore/config.json
