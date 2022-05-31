@@ -15,4 +15,4 @@ if [ -f "$HOME/.config/locale.conf" ]; then
     source $HOME/.config/locale.conf
 fi
 
-exec /usr/bin/kwin_wayland -platform dde-kwin-wayland --xwayland --drm --no-lockscreen  startdde-x11 1> $HOME/.kwin.log 2>&1
+exec /usr/bin/kwin_wayland -platform dde-kwin-wayland --xwayland --drm --no-lockscreen  dde-session-x11 1> $HOME/.kwin.log 2>&1
