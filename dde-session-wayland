@@ -35,7 +35,7 @@ if [ -x "/usr/bin/dbus-update-activation-environment" ]; then
 fi
 
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
-  exec dbus-launch /usr/bin/startdde
+  exec dbus-launch /usr/bin/dde-session
 else
-  exec /usr/bin/startdde
+  exec /usr/bin/dde-session
 fi
